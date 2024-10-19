@@ -20,6 +20,21 @@ nav {
   display: flex;
   gap: 48px;
 }
+#hamburger-menu{
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .menu {
+    display: none;
+  }
+  
+  #hamburger-menu{
+    display: block;
+    width: 24px;
+    height: 24px;
+  }
+}
 
 .menu p {
   margin: 0;
@@ -60,6 +75,16 @@ nav {
   display: flex;
   gap: 10px;
 }
+
+@media screen and (max-width: 768px) {
+  .login-buttons {
+    display: none;
+  }
+  
+}
+
+/* HEADER */
+
 #header-container {
   box-shadow: 0px 4px 200px 0px #e8f9f733;
   height: 800px;
@@ -78,6 +103,25 @@ nav {
   padding-top: 72px;
 }
 
+@media screen and (max-width: 768px) {
+  #header-container h1 {
+    font-size: 40px;
+    line-height: 44px;
+    font-weight: 700;
+    width: 327px;
+    padding: 0;
+    margin-top: 48px;
+    text-align: center;
+  }
+  #header-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+}
+}
+
 #header-container #header-p {
   font-weight: 400;
   font-size: 20px;
@@ -89,20 +133,38 @@ nav {
   margin-top: 32px;
 }
 
-#header-container #numbers-con {
+@media screen and (max-width: 768px) {
+  #header-container #header-p {
+    font-size: 20px;
+    line-height: 32px;
+    font-weight: 400;
+    width: 327px;
+    text-align: center;
+    padding: 0;
+  }
+}
+
+#header-container .numbers-con {
   display: flex;
   gap: 80px;
   z-index: 99;
   position: relative;
   padding: 48px 160px;
 }
-#header-container #numbers-con img {
+
+@media screen and (max-width: 768px) {
+  #header-container #numbers-con-desk {
+    display: none;
+  }
+  
+}
+#header-container .numbers-con img {
   display: inline;
   z-index: 99;
   position: relative;
 }
 
-#header-container #numbers-con p:first-of-type {
+#header-container .numbers-con p:first-of-type {
   margin: 0;
   padding: 0;
   display: flex;
@@ -115,7 +177,7 @@ nav {
   position: relative;
 }
 
-#header-container #numbers-con p:nth-of-type(2) {
+#header-container .numbers-con p:nth-of-type(2) {
   color: #6c727f;
   font-size: 16px;
   font-weight: 400;
@@ -140,6 +202,14 @@ nav {
   margin-left: 160px;
   z-index: 99;
   position: relative;
+}
+@media screen and (max-width: 768px) {
+  #rent-list {
+    margin: 0;
+    margin-top: 48px;
+    width: 328px;
+  }
+  
 }
 
 #rent-list p {
@@ -204,12 +274,51 @@ nav {
   cursor: pointer;
 }
 
+
+#location-of-rent-mobile{
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  #location-of-rent-mobile{
+    display: flex;
+    background-color: white;
+    backdrop-filter: blur(40px);
+    width: 327px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+  #location-of-rent{
+    display: none;
+  }
+  #location-of-rent-mobile input{
+    width: 100%;
+    padding: 28px 16px;
+    border: none;
+  }
+  #location-of-rent-mobile img{
+    width: 48px;
+    height: 48px;
+padding: 16px;
+    border: none;
+    color: white;
+    border-radius: 0 0 8px 8px;
+  }
+}
+
 #map {
   position: absolute;
   bottom: 0;
   right: 0;
   height: 100%;
   z-index: 2;
+}
+
+@media screen and (max-width: 768px) {
+  #map {
+    display: none;
+  }
+  
 }
 
 #bath-sleep1 {
@@ -330,6 +439,15 @@ nav {
   font-size: 12px;
 }
 
+@media screen and (max-width: 768px) {
+  #cart1 {
+    display: none;
+  }
+  #cart2 {
+    display: none;
+  }
+  
+}
 #main-container {
   background-color: #f7f7fd;
   margin: 80px 160px;
