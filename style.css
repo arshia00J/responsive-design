@@ -476,7 +476,7 @@ nav {
 #bath-sleep2 p {
   font-size: 12px;
 }
-@media screen and (max-width: 1428px) {
+@media screen and (max-width: 1400px) {
   #cart1 {
     display: none;
   }
@@ -548,8 +548,7 @@ nav {
 #percent div {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
+  width: 100%;
 }
 
 #percent img {
@@ -566,60 +565,63 @@ nav {
   margin-top: 4px;
 }
 
-@media screen and (width<= 1428px) and (width >= 1024) {
-  #house-main {
-    display: none;
-  }
 
-  #main-container #purple-con {
-    justify-content: center;
-  }
 
-  #main-container #purple-con div {
-    text-align: center;
-    justify-content: center;
-    width: 80%;
-  }
-
-  #main-container #purple-con div h2 {
-    text-align: center;
-    justify-content: center;
-    width: 80%;
-  }
-
-  #main-p {
-    text-align: center;
-    justify-content: center;
-    width: 80%;
-  }
-
-  #percent div p {
-    width: 200px;
-  }
-}
 
 @media screen and (max-width: 1024px) {
+  #main-container #purple-con div {
+    width: 80%;
+  }
+#percent{
+  flex-direction: column;
+}
+#percent #percent-con{
+  display: flex;
+  justify-items: row;
+  width: 100%;
+  border: 1px solid red;
+}
+#percent #percent-con div{
+  width: 100%;
+  border: 1px solid blue;
+  
+}
+
+#purple-con{
+  flex-direction: column;
+}
+
+
+}
+@media screen and (max-width: 768px) {
   #main-container {
     padding: 48px 24px;
+
   }
   #main-container #purple-con div h2 {
     font-size: 32px;
     font-weight: 700;
     line-height: 40px;
-    margin-top: 32px 32px 16px 32px;
+    margin: 32px;
+    width: 100%;
   }
   #main-container #purple-con {
     flex-direction: column;
     overflow: hidden;
     position: relative;
-    height: 800px;
   }
   #house-main {
     display: block;
-    width: 500px;
-    height: 400px;
-    bottom: -130px;
-    position: absolute;
+  }
+  #main-p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25.6px;
+    color: #6c727f;
+    margin-left: 0;
+    width: 100%;
+    margin-left: 32px;
+    margin-top: 16px;
   }
 }
 
@@ -746,12 +748,15 @@ nav {
 /* testimonials */
 
 #test-container {
-  padding: 64px 352px;
   background: linear-gradient(180deg, #f0effb 0%, rgba(255, 255, 255, 0) 100%);
   box-shadow: 0px 4px 200px 0px #e8f9f733;
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+  text-align: center;
+  padding-top: 64px;
+  padding-bottom: 100px;
 }
 
 #test-container h2 {
@@ -766,7 +771,6 @@ nav {
   font-size: 16px;
   font-weight: 400;
   line-height: 25.6px;
-  width: 406px;
 }
 
 #test-container p:nth-of-type(2) {
@@ -798,6 +802,13 @@ nav {
   justify-content: center;
   display: flex;
   gap: 24px;
+}
+
+@media screen and (max-width: 1024px) {
+  #test-container p {
+    width: 100%;
+  }
+  
 }
 
 /* purple footer */
