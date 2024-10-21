@@ -841,6 +841,7 @@ nav {
   flex-direction: column;
   align-items: center;
   margin-top: 64px;
+  
 }
 
 #purple-footer-container h4 {
@@ -870,6 +871,7 @@ nav {
   width: 100%;
   display: flex;
   position: relative;
+  height: auto;
 }
 #purple-footer-container div input {
   width: 100%;
@@ -907,6 +909,40 @@ nav {
 #purple-footer-container p:last-of-type span {
   color: #ffffff;
 }
+
+@media screen and (max-width: 1024px) {
+  #purple-footer {
+    flex-direction: column;
+  }
+#purple-footer-container div input{
+  margin: 0, 24px;
+  border: 1px solid red;
+  width: 100%;
+  margin: 16px 24px;
+
+
+}
+#purple-footer-container div {
+  display: flex;
+  flex-direction: column;
+  
+}
+  #purple-footer-container {
+    width: 100%;
+    
+  }
+  #purple-footer-container div button {
+    display: block;
+    padding: auto;
+    position: relative;
+    right: 0;
+    top: 0;
+    margin: 0 24px;
+    
+  }
+  
+}
+
 
 footer {
   padding: 80px 160px;
