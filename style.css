@@ -103,25 +103,6 @@ nav {
   padding-top: 72px;
 }
 
-@media screen and (max-width: 1024px) {
-  #header-container h1 {
-    font-size: 40px;
-    line-height: 44px;
-    font-weight: 700;
-    width: 327px;
-    padding: 0;
-    margin-top: 48px;
-    text-align: center;
-  }
-  #header-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: auto;
-  }
-}
-
 #header-container #header-p {
   font-weight: 400;
   font-size: 20px;
@@ -138,7 +119,7 @@ nav {
     font-size: 20px;
     line-height: 32px;
     font-weight: 400;
-    width: 327px;
+    width: 70%;
     text-align: center;
     padding: 0;
   }
@@ -195,7 +176,7 @@ nav {
     gap: 80px;
     z-index: 99;
     position: relative;
-    padding: 48px 160px;
+    padding: 48px 0;
   }
 
   #header-container .numbers-con-mob img {
@@ -227,6 +208,30 @@ nav {
   }
 }
 
+@media screen and (max-width: 1024px) {
+  #header-container h1 {
+    font-size: 40px;
+    line-height: 44px;
+    font-weight: 700;
+    width: 70%;
+    padding: 0;
+    margin-top: 48px;
+    text-align: center;
+  }
+  #header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    width: 100%;
+  }
+
+  header {
+    width: 100%;
+  }
+}
+
 .img-num-container {
   display: flex;
   gap: 24px;
@@ -244,13 +249,6 @@ nav {
   z-index: 99;
   position: relative;
 }
-@media screen and (max-width: 1024px) {
-  #rent-list {
-    margin: 0;
-    margin-top: 48px;
-    width: 328px;
-  }
-}
 
 #rent-list p {
   padding: 15px 32px;
@@ -267,6 +265,20 @@ nav {
   line-height: 26.1px;
   color: #7065f0;
   border-bottom: 3px solid #7065f0;
+}
+
+@media screen and (max-width: 1024px) {
+  #rent-list {
+    margin: 0;
+    margin-top: 48px;
+    min-width: 65%;
+    display: flex;
+    justify-content: center;
+  }
+  #rent-list p {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 #location-of-rent {
@@ -323,7 +335,7 @@ nav {
     display: flex;
     background-color: white;
     backdrop-filter: blur(40px);
-    width: 327px;
+    min-width: 65%;
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
   }
@@ -638,7 +650,7 @@ nav {
   color: #000929;
 }
 
-#location-container #browse {
+#location-container .browse {
   padding: 16px 32px;
   background-color: #7065f0;
   color: #ffffff;
@@ -652,7 +664,26 @@ nav {
   justify-content: space-between;
   align-items: center;
 }
-
+#browse-mob {
+  display: none;
+}
+@media screen and (max-width: 1024px) {
+  #loc-titr-con {
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+  }
+  #browse-des {
+    display: none;
+  }
+  #browse-mob {
+    display: flex;
+    justify-self: center;
+    width: 350px;
+    margin-top: 48px;
+    justify-content: center;
+  }
+}
 /* CARDS */
 
 .bath-sleep {
@@ -738,11 +769,29 @@ nav {
   top: 184px;
 }
 
+@media screen and (max-width: 1024px) {
+  #property-container .cart:nth-of-type(2),
+  .cart:nth-of-type(3),
+  .cart:nth-of-type(4),
+  .cart:nth-of-type(5),
+  .cart:nth-of-type(6) {
+    display: none;
+  }
+  #location-container {
+    padding: 0;
+  }
+  #property-container {
+    width: 100%;
+  }
+  #loc-titr {
+    padding: 24px 48px;
+  }
+}
+
 /* testimonials */
 
 #test-container {
   background: linear-gradient(180deg, #f0effb 0%, rgba(255, 255, 255, 0) 100%);
-  box-shadow: 0px 4px 200px 0px #e8f9f733;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -800,18 +849,14 @@ nav {
 @media screen and (max-width: 1024px) {
   #test-container p {
     width: 100%;
-    padding-left: 24px;
-    padding-right: 24px;
   }
 
   #test-container p:first-of-type {
-    width: 100%;
-    padding-left: 40px;
-    padding-right: 40px;
+    width: 80%;
   }
 
   #test-container p:nth-of-type(2) {
-    width: 100%;
+    width: 80%;
   }
 }
 
@@ -1000,9 +1045,15 @@ footer img {
     flex-direction: column;
     text-align: center;
   }
+  #copyrights p {
+    border: 1px solid red;
+  }
+
   #copyrights img {
     margin-top: 24px;
     margin-bottom: 48px;
-    width: 100%;
+    width: 75%;
+    display: flex;
+    align-self: center;
   }
 }
