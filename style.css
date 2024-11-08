@@ -588,11 +588,9 @@ nav {
     display: flex;
     justify-items: row;
     width: 100%;
-    border: 1px solid red;
   }
   #percent #percent-con div {
     width: 100%;
-    border: 1px solid blue;
   }
 
   #purple-con {
@@ -1044,9 +1042,6 @@ footer img {
     display: flex;
     flex-direction: column;
     text-align: center;
-  }
-  #copyrights p {
-    border: 1px solid red;
   }
 
   #copyrights img {
